@@ -8,4 +8,4 @@ Um sistema fácil de usar para auxiliar adolescentes a gerenciar dinheiro, acomp
 ## Time
 - Débora Buriti (@debburiti)
 - Mirella Santana (@mihebs)
-- Myllena Navarro (@Myllena-lins)
+- Myllena Navarro (@Myllena-navarro)
