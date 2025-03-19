@@ -6,19 +6,19 @@ CESAR School | Programação Orientada a Objetos - 2025.1
 Um sistema interativo com o objetico de ajudar seus usuários a gerenciar dinheiro, acompanhar gastos e economizar para metas específicas.
 
 ## Funcionalidades Principais
-Cadastro
+- Cadastro
 
-Login
+- Login
 
-Registros de Despesas Fixas
+- Registros de Despesas Fixas
 
-Registros de Despesas Variáveis
+- Registros de Despesas Variáveis
 
-Criar Metas de Economia
+- Criar Metas de Economia
 
-Acompanhar Meta de Economia
+- Acompanhar Meta de Economia
 
-Painel de Resumo Financeiro
+- Painel de Resumo Financeiro
 
 
 ## Time
