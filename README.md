@@ -3,7 +3,7 @@
 CESAR School | Programação Orientada a Objetos - 2025.1
 
 ## Descrição
-Um sistema fácil de usar para auxiliar adolescentes a gerenciar dinheiro, acompanhar gastos e economizar para metas específicas.
+Um sistema fácil de usar para gerenciar dinheiro, acompanhar gastos e economizar para metas específicas.
 
 ## Time
 - Débora Buriti (@debburiti)
