@@ -30,10 +30,10 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 
 7- Página de metas financeiras.
 
-- https://docs.google.com/document/d/1f4Udu3ZC5pZy2Cw9VDcnorU3Xlljj2IvpDHtvoPs5Fg/edit?usp=sharing
+- https://docs.google.com/document/d/1ptKX0RaaJ0QXxgPUBWRUOpCPXFySNvHj4qX7t7hALSU/edit?tab=t.0
 
 ## Protótipo
-
+- https://www.figma.com/design/qgsgSpHZ26YVbImo4JBUza/SaveIt?node-id=0-1&p=f&t=T4ORkoerjEH3ujFF-0
 
 ## Time
 - Débora Buriti (@debburiti)
