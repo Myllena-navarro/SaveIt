@@ -7,33 +7,29 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 
 ## Principais Funcionalidades
 
-- Gerenciamento de Gastos- Registros e categorização de gastos.
+- Gerenciamento de Gastos | Registros e categorização de gastos.
 
-- Planejamento e Acompanhamento de Metas- Definição de objetivos financeiros e acompanhemento do progresso.
+- Planejamento e Acompanhamento de Metas | Definição de objetivos financeiros e acompanhemento do progresso.
 
-- Painel de Resumo Financeiro- Gráficos e estatísticas para melhor visualização das finanças.
+- Painel de Resumo Financeiro | Gráficos e estatísticas para melhor visualização das finanças.
 
-- Interface Intuitiva- Design moderno e fácil de usar.
+- Interface Intuitiva | Design fácil de usar.
 
-## Histórias do Uuários
-1- Cadastro de Usuários;
+## Histórias de Usuário
 
-2- Login;
-
-3- Cadastro de Despesas Fixas;
-
-4- Despesas Fixas;
-
-5- Cadastro de Despesas Variáveis;
-
-6- Despesas Variáveis;
-
-7- Página de metas financeiras.
+1- Realizar cadastro de usuário;
+2- Realizar login na plataforma;
+3- Cadastro de despesas fixas;
+4- Cadastro de despesas variáveis;
+5- Editar e excluir despesas;
+6- Definir meta financeira;
+7- Gerar relatório financeiro.
 
 - https://docs.google.com/document/d/1ptKX0RaaJ0QXxgPUBWRUOpCPXFySNvHj4qX7t7hALSU/edit?tab=t.0
 
 ## Protótipo
-- https://www.figma.com/design/qgsgSpHZ26YVbImo4JBUza/SaveIt?node-id=0-1&p=f&t=T4ORkoerjEH3ujFF-0
+
+- https://www.figma.com/proto/qgsgSpHZ26YVbImo4JBUza/SaveIt?node-id=0-1&t=119YVU0uwH2aDVEK-1
 
 ## Time
 - Débora Buriti (@debburiti)
