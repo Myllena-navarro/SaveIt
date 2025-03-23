@@ -33,7 +33,7 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 
 ## Screencast
 
-- EM ANDAMENTO
+- https://youtu.be/Tob6Ybmy9UA?si=kTYnBl503sYGhAjo
 
 ## Time
 - Débora Buriti (@debburiti)
