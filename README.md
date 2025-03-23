@@ -31,6 +31,10 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 
 - https://www.figma.com/proto/qgsgSpHZ26YVbImo4JBUza/SaveIt?node-id=0-1&t=119YVU0uwH2aDVEK-1
 
+## Screencast
+
+- EM ANDAMENTO
+
 ## Time
 - Débora Buriti (@debburiti)
 - Mirella Santana (@mihebs)
