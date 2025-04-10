@@ -38,6 +38,16 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 ## Diagramas do Sistema
 ![SaveIt_Diagrama](https://github.com/user-attachments/assets/fd3b57b7-469f-4859-97a0-9344a3174175)
 
+## Como executar a aplicação
+
+Siga os passos abaixo para rodar a aplicação em seu dispositivo ou navegador:
+
+1. Acesse a pasta frontend, utilizando o comando *cd* para navegar entre os diretórios;
+2. Inicie o servidor de desenvolvimento, utilizando o comando abaixo:
+_npx expo start_
+3. Um QR Code será gerado no terminal ou no navegador. Escaneie o QR Code com a câmera do seu celular. Certifique-se de ter o aplicativo *Expo Go* instalado em seu dispositivo;
+4. Alternativas de visualização: caso prefira, também é possível executar o projeto no navegador clicando na opção "Run in web browser" no terminal ou na interface web do Expo.
+
 ## Time
 - Débora Buriti (@debburiti)
 - Mirella Santana (@mihebs)
