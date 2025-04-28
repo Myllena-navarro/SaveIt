@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.7.8'
+    id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.saveit'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+    // Dependência para o Spring Boot Web (inclui suporte a REST, CORS, etc)
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Dependência para persistência de dados (JPA, Banco de Dados)
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+    // Dependência para Thymeleaf (se você estiver usando templates para o frontend)
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    // Se for usar Spring Security (caso seu sistema tenha login/sessão)
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Dependência de validação, caso precise de validações como @NotNull, @Size, etc
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // Dependência para testes (JUnit e outros)
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
