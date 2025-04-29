@@ -1,6 +1,5 @@
 package br.com.saveit;
 
-
 import br.com.saveit.dominio.Usuario;
 import br.com.saveit.dto.TelaCadastroUsuario;
 import br.com.saveit.dto.TelaLogin;
@@ -33,7 +32,7 @@ public class ServicoUsuariosTest {
 
     @Test
     void cadastrar_usuarioValido_deveSalvarUsuarioECriptografarSenha() {
-        // Cenário
+
         TelaCadastroUsuario telaCadastro = new TelaCadastroUsuario();
         telaCadastro.setNome("Teste Usuario");
         telaCadastro.setDataNascimento(LocalDate.of(2000, 1, 1));
@@ -53,10 +52,9 @@ public class ServicoUsuariosTest {
         when(passwordEncoder.encode(telaCadastro.getSenha())).thenReturn(senhaCriptografada);
         when(repositorioUsuarios.save(any(Usuario.class))).thenReturn(usuarioSalvo);
 
-        // Ação
         Usuario resultado = servicoUsuarios.cadastrar(telaCadastro);
 
-        // Verificação
+        
         assertNotNull(resultado);
         assertEquals(usuarioSalvo.getId(), resultado.getId());
         assertEquals(telaCadastro.getNome(), resultado.getNome());
@@ -67,7 +65,7 @@ public class ServicoUsuariosTest {
 
     @Test
     void autenticar_usuarioExistenteSenhaCorreta_deveRetornarUsuario() {
-        // Cenário
+        
         TelaLogin telaLogin = new TelaLogin();
         telaLogin.setEmail("teste@example.com");
         telaLogin.setSenha("senha123");
@@ -77,13 +75,11 @@ public class ServicoUsuariosTest {
         usuarioBanco.setEmail(telaLogin.getEmail());
         usuarioBanco.setSenha(passwordEncoder.encode("senha123")); // Senha já criptografada no banco
 
-        when(repositorioUsuarios.findByEmail(telaLogin.getEmail())).thenReturn(Optional.of(usuarioBanco));
+               when(repositorioUsuarios.findByEmail(telaLogin.getEmail())).thenReturn(Optional.of(usuarioBanco));
         when(passwordEncoder.matches(telaLogin.getSenha(), usuarioBanco.getSenha())).thenReturn(true);
 
-        // Ação
         Usuario resultado = servicoUsuarios.autenticar(telaLogin);
 
-        // Verificação
         assertNotNull(resultado);
         assertEquals(usuarioBanco.getId(), resultado.getId());
         assertEquals(usuarioBanco.getEmail(), resultado.getEmail());
@@ -116,14 +112,15 @@ public class ServicoUsuariosTest {
         Usuario usuarioBanco = new Usuario();
         usuarioBanco.setId(1L);
         usuarioBanco.setEmail(telaLogin.getEmail());
-        usuarioBanco.setSenha(passwordEncoder.encode("senha123")); // Senha correta no banco
+        usuarioBanco.setSenha(passwordEncoder.encode("senha123"));
 
         when(repositorioUsuarios.findByEmail(telaLogin.getEmail())).thenReturn(Optional.of(usuarioBanco));
         when(passwordEncoder.matches(telaLogin.getSenha(), usuarioBanco.getSenha())).thenReturn(false);
 
         RuntimeException exception = assertThrows(RuntimeException.class, () -> servicoUsuarios.autenticar(telaLogin));
         assertEquals("Senha incorreta", exception.getMessage());
-        verify(repositorioUsuarios, times(1)).findByEmail(telaLogin.getEmail());
+ 
+       verify(repositorioUsuarios, times(1)).findByEmail(telaLogin.getEmail());
         verify(passwordEncoder, times(1)).matches(telaLogin.getSenha(), usuarioBanco.getSenha());
     }
 }
