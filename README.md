@@ -18,6 +18,7 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 ## Histórias de Usuário
 
 1- Realizar cadastro de usuário;
+
 2- Realizar login na plataforma;
 3- Cadastro de despesas fixas;
 4- Cadastro de despesas variáveis;
