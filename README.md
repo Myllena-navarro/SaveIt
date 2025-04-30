@@ -20,10 +20,15 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 1- Realizar cadastro de usuário;
 
 2- Realizar login na plataforma;
+
 3- Cadastro de despesas fixas;
+
 4- Cadastro de despesas variáveis;
+
 5- Editar e excluir despesas;
+
 6- Definir meta financeira;
+
 7- Gerar relatório financeiro.
 
 - https://docs.google.com/document/d/1ptKX0RaaJ0QXxgPUBWRUOpCPXFySNvHj4qX7t7hALSU/edit?tab=t.0
