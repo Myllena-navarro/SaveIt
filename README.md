@@ -54,6 +54,10 @@ Siga os passos abaixo para rodar a aplicação em seu dispositivo ou navegador:
 _npx expo start_
 3. Um QR Code será gerado no terminal ou no navegador. Escaneie o QR Code com a câmera do seu celular. Certifique-se de ter o aplicativo *Expo Go* instalado em seu dispositivo;
 4. Alternativas de visualização: caso prefira, também é possível executar o projeto no navegador clicando na opção "Run in web browser" no terminal ou na interface web do Expo.
+5. Para acessar as funcionalidades do Backend, acesse a pasta do Backend, utilizando o comando *cd Back-end/back-end/saveit*;
+6. Em seguida digitar o comando *mvn clean install*;
+7. Seguindo com o comando *mvn spring-boot:run*;
+8. E finalizando escolhendo *-> Usar JDK21*.
 
 ## Time
 - Débora Buriti (@debburiti)
