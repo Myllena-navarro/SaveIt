@@ -14,6 +14,7 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 import java.util.regex.Pattern;
 
 @Service
@@ -33,19 +34,26 @@ public class ServicoDespesasVariaveis {
             throw new IllegalArgumentException("O valor da despesa deve ser maior que zero.");
         }
 
-        if (telaDespesasVariaveis.getCategoria() == null || telaDespesasVariaveis.getCategoria().trim().isEmpty() || !Pattern.matches("^[a-zA-ZÀ-ú ]+$", telaDespesasVariaveis.getCategoria()) || telaDespesasVariaveis.getCategoria().trim().length() > 100) {
+        if (telaDespesasVariaveis.getCategoria() == null || telaDespesasVariaveis.getCategoria().trim().isEmpty() ||
+                !Pattern.matches("^[a-zA-ZÀ-ú ]+$", telaDespesasVariaveis.getCategoria()) ||
+                telaDespesasVariaveis.getCategoria().trim().length() > 100) {
             throw new IllegalArgumentException("A categoria deve conter apenas letras e ter até 100 caracteres.");
         }
 
-        Categoria categoria = repositorioCategoria.findByNome(telaDespesasVariaveis.getCategoria()).get();
-        if (categoria == null) {
+        if (telaDespesasVariaveis.getPeriodicidade() == null || telaDespesasVariaveis.getPeriodicidade().trim().isEmpty() ||
+                !PERIODICIDADES_PREDEFINIDAS.contains(telaDespesasVariaveis.getPeriodicidade())) {
+            throw new IllegalArgumentException("Periodicidade inválida. As opções são: " + String.join(", ", PERIODICIDADES_PREDEFINIDAS));
+        }
+
+        Optional<Categoria> categoriaOptional = repositorioCategoria.findByNome(telaDespesasVariaveis.getCategoria().trim());
+        Categoria categoria;
+
+        if (categoriaOptional.isPresent()) {
+            categoria = categoriaOptional.get();
+        } else {
             categoria = new Categoria();
             categoria.setNome(telaDespesasVariaveis.getCategoria().trim());
             repositorioCategoria.save(categoria);
-        }
-
-        if (telaDespesasVariaveis.getPeriodicidade() == null || telaDespesasVariaveis.getPeriodicidade().trim().isEmpty() || !PERIODICIDADES_PREDEFINIDAS.contains(telaDespesasVariaveis.getPeriodicidade())) {
-            throw new IllegalArgumentException("Periodicidade inválida. As opções são: " + String.join(", ", PERIODICIDADES_PREDEFINIDAS));
         }
 
         DespesasVariaveis despesas = new DespesasVariaveis();
@@ -56,6 +64,7 @@ public class ServicoDespesasVariaveis {
 
         return repositorioDespesas.save(despesas);
     }
+
 
     public List<String> listarPeriodicidadesPredefinidas() {
         return PERIODICIDADES_PREDEFINIDAS;

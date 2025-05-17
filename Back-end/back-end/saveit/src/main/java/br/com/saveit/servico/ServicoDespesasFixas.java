@@ -49,7 +49,6 @@ public class ServicoDespesasFixas {
             repositorioCategoria.save(categoria);
         }
 
-
         DespesasFixas despesas = new DespesasFixas();
         despesas.setValor(telaDespesasFixas.getValor());
         despesas.setPeriodicidade(telaDespesasFixas.getPeriodicidade());
