@@ -65,13 +65,12 @@ public class ServicoDespesasVariaveisTest {
 
     @Test
     void cadastrarDespesasVariaveis_ComNovaCategoria_DeveSalvarDespesaECategoria() {
-        when(categoriaRepositorio.findByNome("Supermercado")).thenReturn(null);
+        when(categoriaRepositorio.findByNome("Supermercado")).thenReturn(Optional.empty());
         Categoria novaCategoria = new Categoria();
         novaCategoria.setId(2L);
         novaCategoria.setNome("Supermercado");
         when(categoriaRepositorio.save(any(Categoria.class))).thenReturn(novaCategoria);
         telaDespesasVariaveis.setCategoria("Supermercado");
-
         when(despesaRepositorio.save(any(DespesasVariaveis.class))).thenReturn(new DespesasVariaveis());
 
         Despesas despesaCadastrada = servicoDespesasVariaveis.cadastrarDespesaVariavel(telaDespesasVariaveis, usuario);
