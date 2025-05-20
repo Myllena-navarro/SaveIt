@@ -1,12 +1,6 @@
-// src/styles/index.ts
-// Arquivo central de estilos para toda a aplicação
-// Contém estilos reutilizáveis para diferentes componentes e telas
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-  /**
-   * Container geral das telas de Login/Cadastro e Cadastro
-   */
   container: {
     flex: 1,
     backgroundColor: '#FFFFFF',
@@ -14,9 +8,6 @@ export const styles = StyleSheet.create({
     paddingTop: 60,
   },
 
-  /**
-   * Conteúdo centralizado na Splash Screen
-   */
   centerContent: {
     flex: 1,
     justifyContent: 'center',
@@ -24,18 +15,12 @@ export const styles = StyleSheet.create({
     zIndex: 2,
   },
 
-  /**
-   * Fundo de ondas decorativas na parte inferior da Splash Screen
-   */
   bottomWaves: {
     position: 'absolute',
     bottom: 0,
     width: '100%',
   },
 
-  /**
-   * Logo do aplicativo
-   */
   logo: {
     width: 100,
     height: 100,
@@ -43,9 +28,6 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  /**
-   * Texto principal do Splash (label do app)
-   */
   logoText: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -53,9 +35,6 @@ export const styles = StyleSheet.create({
     marginTop: 8,
   },
 
-  /**
-   * Título principal das telas
-   */
   title: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -63,9 +42,6 @@ export const styles = StyleSheet.create({
     marginVertical: 20,
   },
 
-  /**
-   * Subtítulo geral para telas
-   */
   subtitle: {
     fontSize: 16,
     color: '#555555',
@@ -73,9 +49,6 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
   },
 
-  /**
-   * Estilo para botões principais
-   */
   button: {
     backgroundColor: '#C8FAD1',
     paddingVertical: 12,
@@ -84,25 +57,16 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  /**
-   * Margem inferior específica para o primeiro botão
-   */
   buttonMargin: {
     marginBottom: 10,
   },
 
-  /**
-   * Texto interno dos botões
-   */
   buttonText: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#FFFFFF',
   },
 
-  /**
-   * Row de botões lado a lado
-   */
   buttonRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -111,9 +75,6 @@ export const styles = StyleSheet.create({
     marginVertical: 16,
   },
 
-  /**
-   * Estilo para campos de input
-   */
   input: {
     width: '90%',
     backgroundColor: '#F0F0F0',
@@ -123,9 +84,6 @@ export const styles = StyleSheet.create({
     marginVertical: 8,
   },
 
-  /**
-   * Estilo para Picker (categoria, periodicidade)
-   */
   picker: {
     width: '90%',
     backgroundColor: '#F0F0F0',
@@ -133,9 +91,6 @@ export const styles = StyleSheet.create({
     marginVertical: 8,
   },
 
-  /**
-   * Botão de voltar
-   */
   backButton: {
     position: 'absolute',
     top: 20,
@@ -143,17 +98,11 @@ export const styles = StyleSheet.create({
     padding: 8,
   },
 
-  /**
-   * Ícone de voltar (texto ou ícone)
-   */
   backIcon: {
     fontSize: 18,
     color: '#000000',
   },
 
-  /**
-   * Container centralizado para telas sem inputs (sucesso, etc.)
-   */
   containerCentered: {
     flex: 1,
     justifyContent: 'center',
@@ -162,17 +111,11 @@ export const styles = StyleSheet.create({
     paddingTop: 60,
   },
 
-  /**
-   * Container para ícone de sucesso
-   */
   successIconContainer: {
     alignItems: 'center',
     marginBottom: 30,
   },
 
-  /**
-   * Fundo do ícone de sucesso
-   */
   successIconBackground: {
     width: 120,
     height: 120,
@@ -182,9 +125,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  /**
-   * Ícone grande de sucesso (<Image />)
-   */
   iconLarge: {
     width: 60,
     height: 60,
@@ -192,9 +132,6 @@ export const styles = StyleSheet.create({
     marginBottom: 24,
   },
 
-  /**
-   * Título da tela de sucesso
-   */
   successTitle: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -202,18 +139,12 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
 
-  /**
-   * Subtítulo da tela de sucesso
-   */
   successSubtitle: {
     fontSize: 16,
     textAlign: 'center',
     marginBottom: 5,
   },
 
-  /**
-   * Descrição adicional na tela de sucesso
-   */
   successDescription: {
     fontSize: 14,
     textAlign: 'center',
@@ -221,9 +152,6 @@ export const styles = StyleSheet.create({
     marginBottom: 30,
   },
 
-  /**
-   * Texto de erro para validações
-   */
   errorText: {
     color: 'red',
     alignSelf: 'flex-start',
@@ -231,10 +159,10 @@ export const styles = StyleSheet.create({
     width: '90%',
   },
 
-  successIcon: {  // Adicionando a propriedade successIcon
+  successIcon: {  
     width: 50,
     height: 50,
-    backgroundColor: 'green',  // Exemplo de cor de fundo, altere conforme necessário
-    borderRadius: 25,  // Fazendo o ícone redondo, se necessário
+    backgroundColor: 'green', 
+    borderRadius: 25,
   },
 });
