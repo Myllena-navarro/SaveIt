@@ -1,7 +1,5 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-// Suas telas importadas
 import LoginCadastro from '@/src/screens/LoginCadastro';
 import Cadastro from '@/src/screens/Cadastro';
 import ConfirmacaoCadastro from '@/src/screens/ConfirmacaoCadastro';
@@ -13,6 +11,9 @@ import Home from '@/src/screens/home';
 import CadastroDespesa from '@/src/screens/CadastroDespesa';
 import AddExpense from '@/src/screens/AddExpense';
 import ConfirmacaoDespesa from '@/src/screens/ConfirmacaoDespesa';
+import Despesas from '@/src/screens/Despesas';
+import MetasFinanceiras from '@/src/screens/MetaFinanceira';
+import Relatorios from '@/src/screens/Relatorio';
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,9 @@ export default function App() {
       <Stack.Screen name="CadastroDespesa" component={CadastroDespesa} options={{ headerShown: false }} />
       <Stack.Screen name="AddExpense" component={AddExpense} options={{ headerShown: false }} />
       <Stack.Screen name="ConfirmacaoDespesa" component={ConfirmacaoDespesa} options={{ headerShown: false }} />
+      <Stack.Screen name="Despesas" component={Despesas} options={{ headerShown: false }} />
+      <Stack.Screen name="MetaFinanceira" component={MetasFinanceiras} options={{ headerShown: false }} />
+      <Stack.Screen name="Relatorio" component={Relatorios} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
