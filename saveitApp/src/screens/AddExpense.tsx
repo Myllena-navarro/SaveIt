@@ -1,4 +1,3 @@
-// src/screens/AddExpense.tsx
 import React, { useState } from 'react';
 import {
   View,
@@ -7,16 +6,15 @@ import {
   TouchableOpacity,
   Alert
 } from 'react-native';
-import { Picker } from '@react-native-picker/picker'; // Importação do Picker
+import { Picker } from '@react-native-picker/picker';
 import {
   useNavigation,
   useRoute,
   NavigationProp,
   RouteProp
-} from '@react-navigation/native'; // useNavigation e useRoute do React Navigation
+} from '@react-navigation/native'; 
 import { styles } from '@/src/styles/styles';
 
-// Definindo os tipos de navegação para esse componente
 type RootStackParamList = {
   CadastroDespesa: undefined;
   AddExpense: { type: 'fixa' | 'variavel' };
@@ -24,44 +22,36 @@ type RootStackParamList = {
 };
 
 export default function AddExpense() {
-  // Pegando navegação e parâmetros da rota
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>(); // Navegação para outras telas
-  const route = useRoute<RouteProp<RootStackParamList, 'AddExpense'>>(); // Obtendo parâmetros da tela atual
-  const { type } = route.params; // Desestruturando o tipo de despesa (fixa ou variável)
-
-  // Categorias e períodos para escolher nas despesas
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>(); 
+  const route = useRoute<RouteProp<RootStackParamList, 'AddExpense'>>(); 
+  const { type } = route.params; 
   const categorias = {
     fixa:     ['Transporte', 'Alimentação', 'Saúde', 'Moradia', 'Outros'],
     variavel: ['Roupa', 'Sapato', 'Presente', 'Livro', 'Outros']
   };
   const periodos = ['Diário', 'Semanal', 'Mensal', 'Anual'];
-
-  // States para armazenar os valores de entrada
   const [valor, setValor]           = useState('');
   const [categoria, setCategoria]   = useState(categorias[type][0]);
   const [periodo, setPeriodo]       = useState(periodos[0]);
-
-  // Função para validar e enviar a despesa
   const handleSubmit = () => {
     if (!valor) {
-      Alert.alert('Campo obrigatório', 'Informe o valor da despesa.'); // Alerta caso o valor não seja preenchido
+      Alert.alert('Campo obrigatório', 'Informe o valor da despesa.'); 
       return;
     }
-    // TODO: salvar no state / API
-    navigation.navigate('ConfirmacaoDespesa'); // Navegar para a tela de confirmação
+    navigation.navigate('ConfirmacaoDespesa'); 
   };
 
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        onPress={() => navigation.goBack()} // Voltar para a tela anterior
+        onPress={() => navigation.goBack()} 
         style={styles.backButton}
       >
-        <Text style={styles.backIcon}>←</Text> {/* Ícone de voltar */}
+        <Text style={styles.backIcon}>←</Text> 
       </TouchableOpacity>
 
       <Text style={styles.title}>
-        {type === 'fixa' ? 'Nova Despesa Fixa' : 'Nova Despesa Variável'} {/* Título dinâmico dependendo do tipo de despesa */}
+        {type === 'fixa' ? 'Nova Despesa Fixa' : 'Nova Despesa Variável'} 
       </Text>
 
       <TextInput
@@ -69,7 +59,7 @@ export default function AddExpense() {
         value={valor}
         onChangeText={setValor}
         style={styles.input}
-        keyboardType="numeric" // Entrada de número
+        keyboardType="numeric" 
       />
 
       <Picker
@@ -77,7 +67,7 @@ export default function AddExpense() {
         onValueChange={setCategoria}
         style={styles.picker}
       >
-        {categorias[type].map(c => ( // Renderizando as categorias baseadas no tipo de despesa
+        {categorias[type].map(c => ( 
           <Picker.Item key={c} label={c} value={c} />
         ))}
       </Picker>
@@ -87,14 +77,14 @@ export default function AddExpense() {
         onValueChange={setPeriodo}
         style={styles.picker}
       >
-        {periodos.map(p => ( // Renderizando os períodos
+        {periodos.map(p => ( 
           <Picker.Item key={p} label={p} value={p} />
         ))}
       </Picker>
 
       <TouchableOpacity
         style={styles.button}
-        onPress={handleSubmit} // Enviar a despesa ao clicar no botão
+        onPress={handleSubmit}
       >
         <Text style={styles.buttonText}>ADICIONAR</Text>
       </TouchableOpacity>
