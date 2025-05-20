@@ -14,6 +14,9 @@ import ConfirmacaoDespesa from '@/src/screens/ConfirmacaoDespesa';
 import Despesas from '@/src/screens/Despesas';
 import MetasFinanceiras from '@/src/screens/MetaFinanceira';
 import Relatorios from '@/src/screens/Relatorio';
+import RelatorioDetalhado from '@/src/screens/RelatorioDetalhado';
+import ConfirmarRelatorio from '@/src/screens/ConfirmarRelatorio';
+import RelatorioSucesso from '@/src/screens/RelatorioSucesso';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +37,9 @@ export default function App() {
       <Stack.Screen name="Despesas" component={Despesas} options={{ headerShown: false }} />
       <Stack.Screen name="MetaFinanceira" component={MetasFinanceiras} options={{ headerShown: false }} />
       <Stack.Screen name="Relatorio" component={Relatorios} options={{ headerShown: false }} />
+      <Stack.Screen name="RelatorioDetalhado" component={RelatorioDetalhado} options={{ headerShown: false }} />
+      <Stack.Screen name="ConfirmarRelatorio" component={ConfirmarRelatorio} options={{ headerShown: false }} />
+      <Stack.Screen name="RelatorioSucesso" component={RelatorioSucesso} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
