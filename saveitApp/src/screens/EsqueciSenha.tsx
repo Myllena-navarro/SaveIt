@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { View, TextInput, TouchableOpacity, Text } from 'react-native';
-import { styles } from '@/src/styles/styles'; // Importa estilos reutilizáveis
+import { styles } from '@/src/styles/styles';
 
-// Componente funcional para recuperação de senha
 export default function EsqueciSenha() {
   const [email, setEmail] = useState('');
   const [mensagemErro, setMensagemErro] = useState('');
   const [mensagemSucesso, setMensagemSucesso] = useState('');
 
-  // Função para validar o formato do e-mail
   const validarEmail = (email: string): boolean =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
@@ -19,11 +17,10 @@ export default function EsqueciSenha() {
     } else {
       setMensagemErro('');
       setMensagemSucesso('Instruções de recuperação enviadas para o seu e-mail.');
-      setEmail(''); // Limpa o campo de e-mail após o envio
+      setEmail(''); 
     }
   };
 
-  // Efeito para limpar mensagens após 5 segundos
   useEffect(() => {
     if (mensagemSucesso || mensagemErro) {
       const timer = setTimeout(() => {
@@ -36,9 +33,8 @@ export default function EsqueciSenha() {
 
   return (
     <View style={styles.container}>
-      {/* Campo de entrada de e-mail */}
       <TextInput
-        style={[styles.input, mensagemErro && { borderColor: 'red' }]} // Aplica borda vermelha se erro
+        style={[styles.input, mensagemErro && { borderColor: 'red' }]} 
         placeholder="Digite seu e-mail"
         value={email}
         onChangeText={setEmail}
@@ -49,7 +45,6 @@ export default function EsqueciSenha() {
         accessibilityHint="Digite o e-mail associado à sua conta para recuperar a senha."
       />
 
-      {/* Exibe mensagens de erro ou sucesso */}
       {mensagemErro ? (
         <Text style={[styles.errorText, { marginBottom: 10 }]}>{mensagemErro}</Text>
       ) : null}
@@ -57,7 +52,6 @@ export default function EsqueciSenha() {
         <Text style={{ color: 'green', marginBottom: 10 }}>{mensagemSucesso}</Text>
       ) : null}
 
-      {/* Botão para disparar a recuperação de senha */}
       <TouchableOpacity
         style={styles.button}
         onPress={handleRecuperarSenha}
