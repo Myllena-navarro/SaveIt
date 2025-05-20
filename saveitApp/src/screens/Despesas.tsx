@@ -2,10 +2,8 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-// Importa só os estilos desta tela
 import { styles_despesas } from '@/src/styles/styles_despesas';
 
-// Tipagem das rotas que essa tela conhece
 type RootStackParamList = {
   Home: undefined;
   CadastroDespesa: { tipo: 'fixa' | 'variavel' };
@@ -16,9 +14,7 @@ export default function Despesas() {
 
   return (
     <View style={styles_despesas.container}>
-      {/* Header: seta de voltar, logo SaveIt e ícones */}
       <View style={styles_despesas.header}>
-        {/* Botão de voltar */}
         <TouchableOpacity
           onPress={() => navigation.goBack()}
           style={styles_despesas.backButton}
@@ -28,10 +24,8 @@ export default function Despesas() {
           <Feather name="arrow-left" size={24} color="black" />
         </TouchableOpacity>
 
-        {/* Texto "SaveIt" */}
         <Text style={styles_despesas.title}>SaveIt</Text>
 
-        {/* Ícones de sino e usuário */}
         <View style={styles_despesas.headerIcons}>
           <Feather name="bell" size={24} color="black" />
           <Feather
@@ -43,7 +37,6 @@ export default function Despesas() {
         </View>
       </View>
 
-      {/* Onda verde no rodapé do header */}
       <Image
         source={require('@/assets/onda.png')}
         style={styles_despesas.headerWave}
@@ -51,9 +44,7 @@ export default function Despesas() {
         accessibilityLabel="Onda decorativa"
       />
 
-      {/* Área de opções */}
       <View style={styles_despesas.content}>
-        {/* Botão FIXA */}
         <TouchableOpacity
           style={styles_despesas.optionButton}
           onPress={() =>
@@ -65,7 +56,6 @@ export default function Despesas() {
           <Text style={styles_despesas.optionButtonText}>FIXA</Text>
         </TouchableOpacity>
 
-        {/* Botão VARIÁVEL */}
         <TouchableOpacity
           style={styles_despesas.optionButton}
           onPress={() =>
