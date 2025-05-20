@@ -1,92 +1,136 @@
-import { StyleSheet, Dimensions } from 'react-native';
-
-const screenWidth = Dimensions.get('window').width;
+import { StyleSheet } from 'react-native';
 
 export const styles_relatorio = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    paddingHorizontal: 20,
-    paddingTop: 40,
+    padding: 20,
+    backgroundColor: '#FFF',
   },
 
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 20,
   },
-
   headerTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#2ecc71',
+    color: '#222',
   },
-
   headerButtons: {
     flexDirection: 'row',
-    gap: 10,
+    gap: 8,
   },
-
   smallButton: {
-    backgroundColor: '#eee',
+    backgroundColor: '#E0E0E0',
+    paddingHorizontal: 10,
     paddingVertical: 6,
-    paddingHorizontal: 12,
-    borderRadius: 6,
+    borderRadius: 8,
   },
-
   smallButtonText: {
     fontSize: 12,
-    color: '#333',
-  },
-
-  card: {
-    backgroundColor: '#f8f8f8',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-    alignItems: 'center',
-  },
-
-  dateText: {
-    fontSize: 14,
-    color: '#888',
-    marginBottom: 4,
-  },
-
-  totalValue: {
-    fontSize: 24,
     fontWeight: 'bold',
     color: '#000',
-    marginBottom: 8,
   },
 
-  chartTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    marginBottom: 12,
+  titleRelatorio: {
+    marginTop: 20,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#333',
   },
-
-  detailCard: {
-    backgroundColor: '#fff',
+  valorTotal: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#10B981',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  graficoContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 200,
+    marginBottom: 20,
+    backgroundColor: '#F9F9F9',
     borderRadius: 12,
-    padding: 16,
+  },
+
+  cardCategoria: {
+    backgroundColor: '#F3F4F6',
+    padding: 12,
+    borderRadius: 10,
     marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    borderWidth: 1,
-    borderColor: '#ddd',
   },
-
-  detailText: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#333',
-  },
-
-  detailValue: {
+  nomeCategoria: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#000',
+    color: '#4B5563',
+  },
+  valorCategoria: {
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#111827',
+  },
+
+  botaoAvancar: {
+    backgroundColor: '#10B981',
+    paddingVertical: 14,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  textoBotao: {
+    color: '#FFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+
+  confirmacaoTexto: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginTop: 100,
+    marginBottom: 10,
+    color: '#111827',
+  },
+  confirmacaoMesAno: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 40,
+    color: '#10B981',
+  },
+  botaoConfirmar: {
+    backgroundColor: '#10B981',
+    paddingVertical: 14,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginHorizontal: 20,
+  },
+  botaoCancelar: {
+    backgroundColor: '#E5E7EB',
+    paddingVertical: 14,
+    borderRadius: 10,
+    alignItems: 'center',
+    marginHorizontal: 20,
+  },
+
+  sucessoCirculo: {
+    backgroundColor: '#10B981',
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 20,
+  },
+  sucessoTexto: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#111827',
+    marginBottom: 40,
+    paddingHorizontal: 20,
   },
 });
