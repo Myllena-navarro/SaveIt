@@ -4,21 +4,16 @@ import { useRoute, RouteProp, useNavigation, NavigationProp } from '@react-navig
 import { styles } from '@/src/styles/styles';
 
 type RootStackParamList = {
-  ErroSenha: { mensagem?: string }; // Tela que pode receber uma mensagem de erro opcional
-  Login: undefined; // Tela de login (sem parâmetros)
+  ErroSenha: { mensagem?: string };
+  Login: undefined; 
 };
 
 export default function ErroSenha() {
   const [mensagemErro, setMensagemErro] = useState('');
-
-  // Obtém os parâmetros da rota atual
   const route = useRoute<RouteProp<RootStackParamList, 'ErroSenha'>>();
-
-  // Hook para navegação
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
 
   useEffect(() => {
-    // Atualiza a mensagem de erro caso exista algum parâmetro de mensagem
     if (route.params?.mensagem) {
       setMensagemErro(route.params.mensagem);
     }
@@ -26,12 +21,10 @@ export default function ErroSenha() {
 
   return (
     <View style={styles.container}>
-      {/* Exibe a mensagem de erro */}
       <Text style={[styles.errorText, { marginBottom: 20, fontSize: 16, color: 'red' }]}>
         {mensagemErro || 'Senha incorreta. Tente novamente.'}
       </Text>
 
-      {/* Botão para voltar para a tela anterior */}
       <TouchableOpacity
         style={styles.button}
         onPress={() => navigation.goBack()}
@@ -43,7 +36,3 @@ export default function ErroSenha() {
     </View>
   );
 }
-
-
-
-
