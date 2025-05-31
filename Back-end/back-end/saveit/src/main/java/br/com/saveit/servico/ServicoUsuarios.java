@@ -5,35 +5,44 @@ import br.com.saveit.dto.TelaCadastroUsuario;
 import br.com.saveit.dto.TelaLogin;
 import br.com.saveit.repositorio.RepositorioUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ServicoUsuarios {
 
-    @Autowired
-    private RepositorioUsuarios repositorioUsuarios;
+    private final RepositorioUsuarios repositorioUsuario;
+    private final BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
+    public ServicoUsuarios(RepositorioUsuarios repositorioUsuario, BCryptPasswordEncoder passwordEncoder) {
+        this.repositorioUsuario = repositorioUsuario;
+        this.passwordEncoder = passwordEncoder;
+    }
 
     public Usuario cadastrar(TelaCadastroUsuario telaCadastro) {
         Usuario usuario = new Usuario();
-        usuario.setNome(telaCadastro.getNome());
-        usuario.setDataNascimento(telaCadastro.getDataNascimento());
+        usuario.setNome(telaCadastro.getNome()); 
+        usuario.setDataNascimento(telaCadastro.getDataNascimento()); 
         usuario.setCpf(telaCadastro.getCpf());
         usuario.setEmail(telaCadastro.getEmail());
         usuario.setSenha(passwordEncoder.encode(telaCadastro.getSenha()));
+        return repositorioUsuario.save(usuario);
+    }
 
-        return repositorioUsuarios.save(usuario);
+    public Usuario buscarPorEmail(String email) {
+        return repositorioUsuario.findByEmail(email).orElse(null);
     }
 
     public Usuario autenticar(TelaLogin telaLogin) {
-        Usuario usuario = repositorioUsuarios.findByEmail(telaLogin.getEmail())
-                .orElseThrow(() -> new RuntimeException("E-mail não encontrado"));
+        Usuario usuario = repositorioUsuario.findByEmail(telaLogin.getEmail())
+                .orElseThrow(() -> new BadCredentialsException("E-mail não encontrado"));
 
-        if (!passwordEncoder.matches(telaLogin.getSenha(), usuario.getSenha())) {
-            throw new RuntimeException("Senha incorreta");
+        boolean senhaCorreta = passwordEncoder.matches(telaLogin.getSenha(), usuario.getSenha());
+
+        if (!senhaCorreta) {
+            throw new BadCredentialsException("Senha incorreta");
         }
 
         return usuario;

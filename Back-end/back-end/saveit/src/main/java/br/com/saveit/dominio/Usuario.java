@@ -17,7 +17,7 @@ public class Usuario {
     @Column(name = "data_nascimento", nullable = false)
     private LocalDate dataNascimento;
 
-    @Column(nullable = false, unique = true, length = 11)
+    @Column(nullable = true, unique = true, length = 11)
     private String cpf;
 
     @Column(nullable = false, unique = true, length = 50)
