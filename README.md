@@ -55,10 +55,15 @@ Siga os passos abaixo para rodar a aplicação em seu dispositivo ou navegador:
 _npx expo start_
 3. Um QR Code será gerado no terminal ou no navegador. Escaneie o QR Code com a câmera do seu celular. Certifique-se de ter o aplicativo *Expo Go* instalado em seu dispositivo;
 4. Alternativas de visualização: caso prefira, também é possível executar o projeto no navegador clicando na opção "Run in web browser" no terminal ou na interface web do Expo.
-5. Para acessar as funcionalidades do Backend, acesse a pasta do Backend, utilizando o comando *cd Back-end/back-end/saveit*;
-6. Em seguida digitar o comando *mvn clean install*;
-7. Seguindo com o comando *mvn spring-boot:run*;
-8. E finalizando escolhendo *-> Usar JDK21*.
+
+Para acessar e rodar a aplicação em java e springboot, siga as Instruções abaixo:
+1. Acesse o diretório back-end utilizando o comando <em>cd Back-end/back-end/saveit<em>
+2. Para rodar o projeto é necessario que esteja utilizando Java JDK 21 ou superior.
+3. Para rodar o projeto é necessario que esteja utilizando Maven 3.8 ou superior.
+4. Para **compilar o projeto**, execute o comando:
+   > mvn clean install
+5. Para **rodar o projeto**, execute o comando:
+   > mvn spring-boot:run
 
 ## Time
 - Débora Buriti (@debburiti)
