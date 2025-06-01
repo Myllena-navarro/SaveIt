@@ -66,7 +66,7 @@ Para acessar e rodar a aplicação em java e springboot, siga as Instruções ab
 5. Para **rodar o projeto**, execute o comando:
    > mvn spring-boot:run
 
-##Observações sobre a aplicação:
+## Observações sobre a aplicação:
 
 **Encapsulamento**
 O sistema aplica o princípio de encapsulamento ao manter os atributos das classes como private e acessá-los por meio de métodos públicos (getters e setters). Isso assegura o controle sobre os dados e protege o estado interno dos objetos.
