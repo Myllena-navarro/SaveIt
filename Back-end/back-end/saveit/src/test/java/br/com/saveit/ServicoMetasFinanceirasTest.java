@@ -1,4 +1,4 @@
-package br.com.saveit;
+package br.com.saveit.servico;
 
 import br.com.saveit.dominio.MetaFinanceira;
 import br.com.saveit.dominio.Usuario;
