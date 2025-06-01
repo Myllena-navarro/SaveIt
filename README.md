@@ -66,6 +66,24 @@ Para acessar e rodar a aplicação em java e springboot, siga as Instruções ab
 5. Para **rodar o projeto**, execute o comando:
    > mvn spring-boot:run
 
+##Observações sobre a aplicação:
+
+**Encapsulamento**
+O sistema aplica o princípio de encapsulamento ao manter os atributos das classes como private e acessá-los por meio de métodos públicos (getters e setters). Isso assegura o controle sobre os dados e protege o estado interno dos objetos.
+
+**Uso de Persistência de Dados**
+A persistência é gerenciada com Spring Data JPA, por meio de interfaces como RepositorioDespesas, RepositorioMetasFinanceiras e RepositorioUsuarios. Essas interfaces permitem realizar operações com o banco de dados de forma simples e eficiente, com suporte automático a consultas, inserções, atualizações e exclusões.
+
+**Injeção de Dependência**
+O projeto utiliza injeção de dependência com as anotações do Spring (@Autowired, @InjectMocks, etc.), promovendo baixo acoplamento entre as classes e facilitando a testabilidade e manutenção do código.
+
+**Segurança com Spring Security**
+A autenticação e autorização são gerenciadas com Spring Security, garantindo acesso restrito aos recursos com base nas credenciais do usuário autenticado. O uso do SecurityContextHolder permite identificar o usuário logado nas requisições protegidas.
+
+**Testes Automatizados**
+O sistema inclui testes automatizados com JUnit 5 e Mockito, cobrindo tanto as regras de negócio (serviços) quanto os endpoints REST (controllers). Os testes simulam o comportamento de componentes externos e verificam o resultado das operações com base em cenários esperados.
+
+
 ## Time
 - Débora Buriti (@debburiti)
 - Mirella Santana (@mihebs)
