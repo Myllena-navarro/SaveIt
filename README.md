@@ -11,7 +11,7 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 
 - Planejamento e Acompanhamento de Metas | Definição de objetivos financeiros e acompanhemento do progresso.
 
-- Painel de Resumo Financeiro | Gráficos e estatísticas para melhor visualização das finanças.
+- Resumo Financeiro | Para melhor visualização das finanças.
 
 - Interface Intuitiva | Design fácil de usar.
 
