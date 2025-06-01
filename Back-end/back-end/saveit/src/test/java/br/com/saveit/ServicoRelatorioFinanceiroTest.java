@@ -1,3 +1,5 @@
+package br.com.saveit;
+
 import br.com.saveit.dominio.Categoria;
 import br.com.saveit.dto.FiltroRelatorioDTO;
 import br.com.saveit.dto.RelatorioCategoriaDTO;
