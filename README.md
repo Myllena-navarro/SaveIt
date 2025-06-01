@@ -58,7 +58,8 @@ _npx expo start_
 4. Alternativas de visualização: caso prefira, também é possível executar o projeto no navegador clicando na opção "Run in web browser" no terminal ou na interface web do Expo.
 
 Para acessar e rodar a aplicação em java e springboot, siga as Instruções abaixo:
-1. Acesse o diretório back-end utilizando o comando <em>cd Back-end/back-end/saveit<em>
+1. Acesse o diretório back-end utilizando o comando:
+   > cd Back-end/back-end/saveit
 2. Para rodar o projeto é necessario que esteja utilizando Java JDK 21 ou superior.
 3. Para rodar o projeto é necessario que esteja utilizando Maven 3.8 ou superior.
 4. Para **compilar o projeto**, execute o comando:
