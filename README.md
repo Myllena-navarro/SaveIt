@@ -43,7 +43,7 @@ O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias
 - Entrega 2, Duas histórias implementadas | https://youtube.com/shorts/tyowoEMJ53E?feature=share
 - Entrega 3, Mais duas histórias implementadas | https://youtu.be/V4cL9TUKXQU?si=-C9dVo_YTEwkqD6D
 - Entrega 4, Screencast | Últimas três histórias implementadas | 
-- Screencast execução dos testes | 
+- Screencast execução dos testes | https://youtu.be/W7K7zX6tk_U?si=dQqyN7m0YpUeo3Af
 
 ## Diagramas do Sistema
 ![SaveIt_Diagrama](https://github.com/user-attachments/assets/fd3b57b7-469f-4859-97a0-9344a3174175)
