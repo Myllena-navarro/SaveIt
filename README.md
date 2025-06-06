@@ -3,7 +3,7 @@
 CESAR School | Programação Orientada a Objetos - 2025.1
 
 ## Descrição
-O SaveIt é um sistema interativo projetado para ajudar os usuários a gerencias dinheiro, acompanhando gastos e monitoriando as economicas para metas especificas do usuário. O intuito é ajudar no controle das finanças de forma prática e intuitiva.
+O SaveIt é um sistema projetado para ajudar os usuários a gerenciar dinheiro, acompanhar gastos e monitorar as economias para metas específicas do usuário. O intuito é ajudar no controle das finanças de forma prática e intuitiva.
 
 ## Principais Funcionalidades
 
